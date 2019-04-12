@@ -64,7 +64,7 @@ describe AWeber::Resource do
   
   it "should send a JSON respresentation of the object on save" do
     resource = FakeResource.new(@aweber)
-    @oauth.should_receive(:put).with(resource.link, "{\"name\":\"Bob\"}", anything)
+    @oauth.should_receive(:patch).with(resource.link, "{\"name\":\"Bob\"}", anything)
     resource.name = "Bob"
     resource.save
   end

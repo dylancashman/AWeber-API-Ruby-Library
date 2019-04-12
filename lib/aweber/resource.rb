@@ -101,7 +101,7 @@ module AWeber
     alias_attribute :link, :self_link
     alias_attribute :resource_type, :resource_type_link
     
-    def_delegators :client, :get, :post, :put
+    def_delegators :client, :get, :post, :put, :patch
 
     attr_reader :parent
 
@@ -121,7 +121,7 @@ module AWeber
         body[attr_] = send(attr_)
         body
       end
-      client.put(self_link, body)
+      client.patch(self_link, body)
     end
     
     def writable_attrs
