@@ -2,6 +2,14 @@ h1. AWeber API Gem "!https://secure.travis-ci.org/aweber/AWeber-API-Ruby-Library
 
 Official AWeber API gem.
 
+h2. NOTE ON FORK
+
+The original gem stopped working for me around March 20, 2019.  I contacted Aweber Labs support and apparently "PUT" requests are no longer valid, and were replaced with "PATCH" commands.  In this fork, I just replace any "PUT"s with "PATCH"es.  
+
+I've made it a pull request, but I don't believe this repo is being maintained anymore.  This fork is provided AS IS.
+
+-Dylan
+
 h2. Installation
 
 @gem install aweber@
